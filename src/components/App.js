@@ -1,13 +1,12 @@
+import React from 'react';
+import '../assets/styles/App.scss';
 
-import '../assets/App.css';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Kasa
-        </p>
      
       </header>
     </div>
@@ -15,3 +14,4 @@ function App() {
 }
 
 export default App;
+
