@@ -4,7 +4,7 @@ import HomePage from './pages/homePage';
 import APropos from './pages/aPropos';
 import Appartment from './pages/appartment';
 import Error from './pages/error';
-import Layout from './root'
+import Layout from './layout'
 
 const Router = createBrowserRouter([
   {
@@ -17,11 +17,12 @@ const Router = createBrowserRouter([
         element: <HomePage/>
       },
       {
-        path: 'apropos',
+        path: 'a-propos',
         element: <APropos />
       },
       {
-        path: 'appartement',
+     
+        path: 'appartment/:id',
         element: <Appartment />
       }
     ]

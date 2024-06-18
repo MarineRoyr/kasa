@@ -2,11 +2,14 @@ import React from 'react';
 import '../../assets/styles/App.scss';
 
 
-const Card = ({appartments, firstImage, title}) => {
+const Card = ({imagePath, caption}) => {
   
     return (
         <div className="card">
-         
+         <div className="galleryPhoto">
+                <img src={imagePath} alt={caption} />
+            </div>
+            <p className="caption">{caption}</p>
         </div>
     );
 };

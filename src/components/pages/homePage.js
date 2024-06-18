@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerHomePage from '../design-components/Banner'
+import BannerHomePage from '../design-components/banner'
 import Gallery from '../gallery'
 import '../../assets/styles/App.scss';
 
