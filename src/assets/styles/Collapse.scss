@@ -1,0 +1,56 @@
+// Variables
+$collapse-transition-duration: 0.3s;
+$collapse-transition-ease: ease-in-out;
+$blackColor: #000000;
+$kasaColor: #FF6060;
+$galleryColor: #F6F6F6;
+$fontText: 'Montserrat';
+
+// Mixin for collapse transitions
+@mixin collapse-transition {
+    transition: max-height $collapse-transition-duration $collapse-transition-ease,
+        opacity $collapse-transition-duration $collapse-transition-ease;
+}
+
+// Collapse styles
+.collapse {
+
+    display: flex;
+    flex-direction: column;
+    font-family: $fontText;
+    align-items: center;
+
+    .collapseContent {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 85%;
+        @include collapse-transition;
+    }
+
+
+    &.is-open {
+        .collapseContent {
+            max-height: 500px; // Adjust this value based on your content
+            opacity: 1;
+        }
+    }
+}
+
+// Optional styles for the toggle button
+.collapseToggle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    padding: 8px 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    width: 85%;
+    height: 54px;
+    border: none;
+    border-radius: 5px;
+    background-color: $kasaColor;
+    cursor: pointer;
+}

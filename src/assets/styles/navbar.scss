@@ -1,0 +1,37 @@
+$blackColor: #000000;
+$kasaColor: #FF6060;
+$galleryColor: #F6F6F6;
+$fontText: 'Montserrat';
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        ul {
+            font-family: $fontText;
+            display: flex;
+            gap: 47px;
+            font-size: 24px;
+            font-weight: 500;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                text-align: right;
+            }
+
+            a {
+                display: block;
+                padding: 6px 12px;
+                text-decoration: none;
+                color: $blackColor;
+            }
+
+            a:focus {
+                text-decoration: underline;
+            }
+
+        }
+    }
+}

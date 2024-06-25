@@ -1,0 +1,42 @@
+$blackColor: #000000;
+$kasaColor: #FF6060;
+$galleryColor: #F6F6F6;
+$fontText: 'Montserrat';
+
+
+
+.Error {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .Error404 {
+        font-family: $fontText;
+        color: $kasaColor;
+        font-size: 288px;
+        font-weight: 700;
+        margin-bottom: 139px;
+        margin-top: 139px;
+    }
+
+    .ErrorTxt {
+        font-family: $fontText;
+        color: $kasaColor;
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 139px;
+    }
+
+    font-family: $fontText;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 139px;
+
+    a {
+        color: $blackColor;
+    }
+
+
+}
