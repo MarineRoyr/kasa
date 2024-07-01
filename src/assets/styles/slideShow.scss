@@ -2,3 +2,108 @@ $blackColor: #000000;
 $kasaColor: #FF6060;
 $galleryColor: #F6F6F6;
 $fontText: 'Montserrat';
+
+.slideShow {
+    .slideShowPhoto {
+        position: relative;
+    }
+
+    img {
+
+        border-radius: 25px;
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+    }
+
+    .chevronPrev {
+        position: absolute;
+        top: 40%;
+        left: 1%;
+        border: none;
+        background: none;
+        width: 48px;
+        height: 80px;
+    }
+
+    .chevronNext {
+        position: absolute;
+        top: 40%;
+        left: 96.5%;
+        border: none;
+        background: none;
+        width: 48px;
+        height: 80px;
+    }
+
+    .slideShowCounter {
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        bottom: 8%;
+        left: 49%
+    }
+
+}
+
+
+@media (max-width: 1800px) {
+
+    .slideShow {
+        .chevronPrev {
+            left: 1%;
+        }
+
+        .chevronNext {
+            left: 93%;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .slideShow {
+        .chevronPrev {
+            left: 1%;
+        }
+
+        .chevronNext {
+            left: 90.5%;
+        }
+    }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    .slideShow {
+
+        img {
+            height: 255px;
+        }
+
+        .chevronPrev {
+            width: 30px;
+            left: 1%;
+        }
+
+        .chevronNext {
+            width: 30px;
+            left: 90.5%;
+        }
+
+        .slideShowCounter {
+            display: none;
+        }
+
+    }
+
+
+
+}

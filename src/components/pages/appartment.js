@@ -42,7 +42,7 @@ const Appartment = () => {
                 <div className='appartmentInfosLeft'>
                     <h1>{appartment.title}</h1>
                     <div className='location'><Location id={id} /></div> 
-                    <div className='tags'><Tag id={id} /></div>
+                    <div ><Tag id={id} /></div>
                 </div>
                 <div className='appartmentInfosRight'>
                     <div><Host id={id} /></div>
@@ -51,10 +51,10 @@ const Appartment = () => {
             </div>
             <div className='appartmentDescription'>
                 <Collapse Title="Description">
-                    <div><Description id={id} /></div>
+                    <div className='divDescription'><Description id={id} /></div>
                 </Collapse>
                 <Collapse Title="Equipements">
-                    <div><EquipmentsAppart id={id} /></div>
+                    <div className='divEquipments'><EquipmentsAppart id={id} /></div>
                 </Collapse>
             </div>
         </div>

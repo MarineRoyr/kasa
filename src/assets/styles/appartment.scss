@@ -9,36 +9,7 @@ $fontText: 'Montserrat';
     display: flex;
     flex-direction: column;
 
-    .slideShow {
-        .slideShowPhoto {
-            position: relative;
-        }
 
-        img {
-
-            border-radius: 25px;
-            width: 100%;
-            height: 415px;
-            object-fit: cover;
-        }
-
-        .chevronPrev {
-            position: absolute;
-            top: 40%;
-            left: 1%;
-            border: none;
-            background: none;
-        }
-
-        .chevronNext {
-            position: absolute;
-            top: 40%;
-            left: 96.5%;
-            border: none;
-            background: none;
-        }
-
-    }
 
     h1 {
         font-family: $fontText;
@@ -104,6 +75,20 @@ $fontText: 'Montserrat';
             margin-top: 21px;
             width: 196px;
             gap: 10px;
+
+
+            .star-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .filled {
+                color: #ff6060;
+            }
+
+            .empty {
+                color: #e3e3e3;
+            }
         }
     }
 }
@@ -114,25 +99,128 @@ $fontText: 'Montserrat';
     gap: 76px;
 
     .collapse {
-        margin: 0;
         width: 50%;
 
         .collapseToggle {
             width: 100%;
         }
 
-        .collapseContent {
+        .collapseContent div {
+            padding-top: 16px;
             font-size: 18px;
-            margin-top: 20px;
-
         }
+
+        .equipments {
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
     }
 
-    .equipments {
-        margin: 5px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .appartmentPage {
+
+        .appartmentInfos {
+            .tags {
+                .tag {
+                    font-size: 12px;
+                    padding: 3px 25px;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .appartmentPage {
+
+        .appartmentInfos {
+
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .location {
+                font-size: 14px;
+                padding: 0;
+            }
+
+            .tags {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                flex-wrap: wrap;
+
+                .tag {
+                    font-size: 10px;
+                    padding: 3px 25px;
+                }
+
+            }
+
+
+
+            .appartmentInfosRight {
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .host {
+                    .hostName {
+                        font-size: 12px;
+                        padding-top: 2px;
+                        width: 50px;
+                    }
+
+                    .hostPhoto {
+                        border-radius: 90px;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .rate {
+                    .star-icon {
+                        width: 18px;
+                        height: 18px
+                    }
+                }
+            }
+
+
+        }
+
+        .appartmentDescription {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+            .collapse {
+                padding-top: 0;
+                width: 100%;
+
+                .collapseContent div {
+                    padding-top: 5px;
+                    font-size: 12px;
+                }
+
+            }
+        }
     }
 
 }

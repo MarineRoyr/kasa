@@ -9,9 +9,7 @@ function Rating ({rating}){
     <FontAwesomeIcon
       key={index}
       icon={faStar}
-      style={{ width :30,
-        height:30,
-        color: index < rating ? '#ff6060' : '#e3e3e3' }}
+      className={`star-icon ${index < rating ? 'filled' : 'empty'}`}
     />
     ))
     return(

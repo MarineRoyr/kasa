@@ -2,6 +2,7 @@ import React from 'react';
 import '../../assets/styles/App.scss';
 
 
+
 const Card = ({imagePath, caption}) => {
   
     return (

@@ -8,6 +8,7 @@ $fontText: 'Montserrat';
 
 footer {
     display: flex;
+    align-items: self-end;
     justify-content: center;
     background-color: $blackColor;
     color: white;

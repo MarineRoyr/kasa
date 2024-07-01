@@ -18,7 +18,9 @@ const LocationAppart = () => {
     return (
 
         <div>
+        <h2 className='location'>
         { LocationData.location }
+        </h2>
         </div>
     )
 }

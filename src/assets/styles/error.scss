@@ -27,6 +27,7 @@ $fontText: 'Montserrat';
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 139px;
+        text-align: center;
     }
 
     font-family: $fontText;
@@ -37,6 +38,29 @@ $fontText: 'Montserrat';
     a {
         color: $blackColor;
     }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .Error {
+
+        .Error404 {
+            font-size: 96px;
+        }
+
+        .ErrorTxt {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        a {
+            font-size: 14px;
+        }
+
+    }
+
 
 
 }

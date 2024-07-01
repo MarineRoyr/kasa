@@ -18,14 +18,12 @@ $fontText: 'Montserrat';
 
     .galleryItem a {
         text-decoration: none;
-
     }
 
     .galleryItem {
         width: 100%;
         height: 100%;
     }
-
 
     .galleryPhoto img {
         width: 100%;
@@ -44,6 +42,83 @@ $fontText: 'Montserrat';
         bottom: 90px;
         left: 20px;
         width: 250px;
+    }
+
+}
+
+
+@media (max-width: 1900px) {
+
+    .gallery {
+        .galleryPhoto img {
+            height: 400px;
+        }
+    }
+
+}
+
+
+@media (max-width: 1500px) {
+
+    .gallery {
+        .galleryPhoto img {
+            height: 340px;
+        }
+
+        .caption {
+            width: 180px;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .gallery {
+        gap: 20px;
+        grid-template-rows: repeat auto-fill(300px);
+
+        .galleryPhoto img {
+            height: 255px;
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .gallery {
+        .caption {
+            font-size: 12px;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 0;
+        gap: 20px;
+
+        .galleryItem {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .caption {
+                position: absolute;
+                bottom: 5%;
+
+            }
+
+        }
+
+
     }
 
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../../assets/styles/appartment.scss';
+import '../../assets/styles/slideShow.scss';
 import galleryData from '../../datas/appartments.json'; 
 import ChevronNext from './chevronNext';
 import ChevronPrev from './chevronPrev';
@@ -35,6 +35,9 @@ return (
                 <button className="chevronNext" onClick={handleNext}>
                     <ChevronNext />
                 </button>
+                <div className="slideShowCounter">
+                    {count + 1} / {appartmentData.pictures.length}
+                </div>
               </>  )}
             </div>
         </div>

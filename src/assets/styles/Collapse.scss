@@ -1,5 +1,5 @@
 // Variables
-$collapse-transition-duration: 0.2s;
+$collapse-transition-duration: 0.15s;
 $blackColor: #000000;
 $kasaColor: #FF6060;
 $galleryColor: #F6F6F6;
@@ -25,6 +25,16 @@ $fontText: 'Montserrat';
         width: 85%;
         @include collapse-transition;
 
+        p {
+            padding-left: 20px;
+            padding-right: 15px;
+        }
+
+    }
+
+    .chevronClic {
+        width: 32px;
+        height: 32px;
     }
 
 
@@ -32,15 +42,16 @@ $fontText: 'Montserrat';
     &.is-closed {
         .chevronClic {
             transform: rotate(0deg);
-            transition: transform 400ms;
+            transition: transform 200ms;
         }
 
         .collapseContent {
             max-height: 500px;
 
             p {
-                animation-duration: 200ms;
+                animation-duration: 150ms;
                 animation-name: slidein;
+
             }
 
             @keyframes slidein {
@@ -63,7 +74,7 @@ $fontText: 'Montserrat';
             max-height: 500px;
 
             p {
-                animation-duration: 200ms;
+                animation-duration: 150ms;
                 animation-name: slideout;
             }
 
@@ -105,5 +116,37 @@ $fontText: 'Montserrat';
     border-radius: 5px;
     background-color: $kasaColor;
     cursor: pointer;
+
+}
+
+
+@media (max-width: 768px) {
+    .collapse {
+
+        padding-top: 20px;
+
+        .chevronClic {
+            width: 16px;
+            height: 16px;
+        }
+
+
+
+        .collapseContent {
+            font-size: 12px;
+
+
+        }
+
+        .collapseToggle {
+            margin: 0;
+            font-size: 13px;
+            height: 30px;
+
+        }
+
+
+    }
+
 
 }

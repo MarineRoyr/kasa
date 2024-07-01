@@ -17,11 +17,11 @@ const Tags = () => {
     
     return (
 
-        <div>
+        <div className='tags'>
              {TagData.tags.map((tag, index) => (
-                <span key={index} className='tag'>
+                <div key={index} className='tag'>
                     {tag}
-                </span>
+                </div>
             ))}
         </div>
         

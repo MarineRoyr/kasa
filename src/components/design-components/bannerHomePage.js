@@ -2,6 +2,7 @@ import React from 'react';
 import BannerImage from './bannerHomePage.png'
 import '../../assets/styles/banner.scss'
 
+
 const BannerHomePage = () => {
     return (
       <div className="bannerContainer">
