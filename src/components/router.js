@@ -9,8 +9,8 @@ import Layout from './layout'
 const Router = createBrowserRouter([
   {
     path: '/',
-    element: <div className='Body'> <Layout/> </div>,
-    errorElement: <Error />,
+    element: <div> <Layout/> </div>,
+    errorElement: <Error/>,
     children: [
       {
         path: '/',
@@ -21,8 +21,7 @@ const Router = createBrowserRouter([
         element: <APropos />
       },
       {
-     
-        path: 'appartment/:id',
+        path: 'appartement/:id',
         element: <Appartment />
       }
     ]

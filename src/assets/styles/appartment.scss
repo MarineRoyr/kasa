@@ -1,0 +1,138 @@
+$blackColor: #000000;
+$kasaColor: #FF6060;
+$galleryColor: #F6F6F6;
+$fontText: 'Montserrat';
+
+
+
+.appartmentPage {
+    display: flex;
+    flex-direction: column;
+
+    .slideShow {
+        .slideShowPhoto {
+            position: relative;
+        }
+
+        img {
+
+            border-radius: 25px;
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+        }
+
+        .chevronPrev {
+            position: absolute;
+            top: 40%;
+            left: 1%;
+            border: none;
+            background: none;
+        }
+
+        .chevronNext {
+            position: absolute;
+            top: 40%;
+            left: 96.5%;
+            border: none;
+            background: none;
+        }
+
+    }
+
+    h1 {
+        font-family: $fontText;
+        color: $kasaColor;
+        font-size: 36px;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 12px;
+    }
+
+    .appartmentInfos {
+        display: flex;
+        justify-content: space-between;
+
+        .location {
+            font-family: $fontText;
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0px;
+
+            .tag {
+                margin-right: 10px;
+                padding: 3px 37px;
+                border-radius: 50px;
+                background-color: $kasaColor;
+                color: #F6F6F6;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .host {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding-top: 25px;
+
+            .hostPhoto {
+                border-radius: 90px;
+                width: 75px;
+                height: 75px;
+            }
+
+            .hostName {
+                padding-top: 15px;
+                color: $kasaColor;
+                font-size: 18px;
+                width: 100px;
+                text-align: right;
+            }
+
+
+        }
+
+        .rate {
+            display: flex;
+            margin-top: 21px;
+            width: 196px;
+            gap: 10px;
+        }
+    }
+}
+
+.appartmentDescription {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+
+    .collapse {
+        margin: 0;
+        width: 50%;
+
+        .collapseToggle {
+            width: 100%;
+        }
+
+        .collapseContent {
+            font-size: 18px;
+            margin-top: 20px;
+
+        }
+    }
+
+    .equipments {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

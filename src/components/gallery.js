@@ -11,7 +11,7 @@ const Gallery = () => {
                 const firstImage = appartments.pictures[0];
                 return (
                     <div key={appartments.id} className="galleryItem">
-                      <Link to={`/appartment/${appartments.id}`}> <div className="galleryPhoto">
+                      <Link to={`/appartement/${appartments.id}`}> <div className="galleryPhoto">
 
                       <Card     key={appartments.id}     
                                 imagePath={firstImage}              

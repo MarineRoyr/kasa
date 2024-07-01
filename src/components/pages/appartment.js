@@ -1,37 +1,64 @@
-import React from 'react';
-import '../../assets/styles/App.scss';
-import { useParams } from 'react-router-dom';
-import GalleryData from '../../datas/appartments.json'
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import '../../assets/styles/appartment.scss';
+import GalleryData from '../../datas/appartments.json';
 import SlideShow from '../design-components/slideShow';
-
+import Tag from '../design-components/tagsAppartments';
+import Location from '../design-components/appartmentLocation';
+import Description from '../design-components/appartmentDescription';
+import EquipmentsAppart from '../design-components/appartmentEquipments';
+import Host from '../design-components/host';
+import RatingAppart from '../design-components/rating';
+import Collapse from '../design-components/sectionDesign';
 
 
 const Appartment = () => {
-
+  
     const { id } = useParams();
-    const appartmentData = GalleryData.find(GalleryData => GalleryData.id === (id));
+    const navigate = useNavigate();
+    const [appartment, setAppartment] = useState(null); 
+
+    useEffect(() => {
+  
+      const appartmentData = GalleryData.find(item => item.id === id);
+
+      if (!appartmentData) {
+        navigate('/error');
+      } else {
+        setAppartment(appartmentData);
+      }
+    }, [id, navigate]); 
    
-    if (!appartmentData) {
-        return <div>Appartement non trouvé</div>;
+    if (!appartment) {
+      return 'Chargement...';
     }
 
-    if (!appartmentData.pictures || appartmentData.pictures.length === 0) {
-        return <div>Pas d'images disponibles pour cet appartement.</div>;
-    }
-    
     return (
-        <main>
-        <div>
-            <h1>{appartmentData.title}</h1>
-            <div className="appartmentImages">
-            <SlideShow id={id} />
-            </div> <h2>{appartmentData.title}</h2>
-                        <p>{appartmentData.description}</p>
+        <div className='appartmentPage'>
+            <div className='appartmentPageSlideShow'>
+                <SlideShow id={id} />
+            </div>
+            <div className='appartmentInfos'>
+                <div className='appartmentInfosLeft'>
+                    <h1>{appartment.title}</h1>
+                    <div className='location'><Location id={id} /></div> 
+                    <div className='tags'><Tag id={id} /></div>
+                </div>
+                <div className='appartmentInfosRight'>
+                    <div><Host id={id} /></div>
+                    <div className='rate'><RatingAppart rating={appartment.rating} /></div>
+                </div>
+            </div>
+            <div className='appartmentDescription'>
+                <Collapse Title="Description">
+                    <div><Description id={id} /></div>
+                </Collapse>
+                <Collapse Title="Equipements">
+                    <div><EquipmentsAppart id={id} /></div>
+                </Collapse>
+            </div>
         </div>
-        </main>
     );
 };
-
-
 
 export default Appartment;

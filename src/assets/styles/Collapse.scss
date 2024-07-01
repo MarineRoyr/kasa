@@ -1,18 +1,15 @@
 // Variables
-$collapse-transition-duration: 0.3s;
-$collapse-transition-ease: ease-in-out;
+$collapse-transition-duration: 0.2s;
 $blackColor: #000000;
 $kasaColor: #FF6060;
 $galleryColor: #F6F6F6;
 $fontText: 'Montserrat';
 
-// Mixin for collapse transitions
+
 @mixin collapse-transition {
-    transition: max-height $collapse-transition-duration $collapse-transition-ease,
-        opacity $collapse-transition-duration $collapse-transition-ease;
+    transition: max-height $collapse-transition-duration ease-in-out,
 }
 
-// Collapse styles
 .collapse {
 
     display: flex;
@@ -20,24 +17,79 @@ $fontText: 'Montserrat';
     font-family: $fontText;
     align-items: center;
 
+
+
     .collapseContent {
         max-height: 0;
         overflow: hidden;
-        opacity: 0;
         width: 85%;
         @include collapse-transition;
+
+    }
+
+
+
+    &.is-closed {
+        .chevronClic {
+            transform: rotate(0deg);
+            transition: transform 400ms;
+        }
+
+        .collapseContent {
+            max-height: 500px;
+
+            p {
+                animation-duration: 200ms;
+                animation-name: slidein;
+            }
+
+            @keyframes slidein {
+                from {
+                    margin-top: 16px;
+                }
+
+                to {
+                    margin-top: 0%;
+                    width: 100%;
+                }
+            }
+        }
+
     }
 
 
     &.is-open {
         .collapseContent {
-            max-height: 500px; // Adjust this value based on your content
-            opacity: 1;
+            max-height: 500px;
+
+            p {
+                animation-duration: 200ms;
+                animation-name: slideout;
+            }
+
+            @keyframes slideout {
+                from {
+                    margin-top: 0%;
+                    width: 100%;
+                }
+
+                to {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+
+
+        .chevronClic {
+            transform: rotate(-180deg);
+            transition: transform 400ms;
         }
     }
+
 }
 
-// Optional styles for the toggle button
+
 .collapseToggle {
     display: flex;
     justify-content: space-between;
@@ -53,4 +105,5 @@ $fontText: 'Montserrat';
     border-radius: 5px;
     background-color: $kasaColor;
     cursor: pointer;
+
 }

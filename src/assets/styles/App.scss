@@ -6,6 +6,10 @@ $kasaColor: #FF6060;
 $galleryColor: #F6F6F6;
 $fontText: 'Montserrat';
 
+body {
+  margin: 0;
+}
+
 .mainContent {
   font-family: $fontText;
   display: flex;

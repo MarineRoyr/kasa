@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import '../../assets/styles/App.scss';
 import '../../assets/styles/Collapse.scss'
 import ChevronUp from '../design-components/chevronUp'
-import ChevronDown from '../design-components/chevronDown';
 
 
 const SectionDesign = ({ children, Title }) => {
@@ -13,11 +12,10 @@ const SectionDesign = ({ children, Title }) => {
   };
 
   return (
-    <div className={`collapse ${isOpen ? 'is-open' : ''}`}>
+    <div className={`collapse ${isOpen ? 'is-open' : 'is-closed'}`}>
       <button className="collapseToggle" onClick={toggleCollapse}>
-     
         {Title} 
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+      <ChevronUp />
       </button>
       <div 
         className="collapseContent"

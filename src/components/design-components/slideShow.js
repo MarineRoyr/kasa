@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import '../../assets/styles/App.scss';
+import '../../assets/styles/appartment.scss';
 import galleryData from '../../datas/appartments.json'; 
-import ChevronNext from './ChevronNext';
+import ChevronNext from './chevronNext';
 import ChevronPrev from './chevronPrev';
 
 const SlideShow = ({id}) => {
@@ -19,17 +19,23 @@ const handlePrev = () => {
 };
 
 
+const showChevrons = appartmentData.pictures.length > 1
+
+
 return (
     <div className="slideShow">
         <div className="slideShowItem">
             <div className="slideShowPhoto">
                 <img src={appartmentData.pictures[count]} alt={appartmentData.title} />
-                <button onClick={handleNext}>
-                    <ChevronNext />
-                </button>
-                <button onClick={handlePrev}>
+                {showChevrons && (
+                 <>
+                <button className="chevronPrev" onClick={handlePrev}>
                     <ChevronPrev />
                 </button>
+                <button className="chevronNext" onClick={handleNext}>
+                    <ChevronNext />
+                </button>
+              </>  )}
             </div>
         </div>
     </div>

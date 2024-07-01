@@ -8,6 +8,7 @@ import NavBar from '../navBar';
 const Error = () => {
   return (
     <div>
+       <main className='mainContent'>
       <NavBar/>
     <div className='Error'>
       <h2 className='Error404'>404</h2>
@@ -15,7 +16,9 @@ const Error = () => {
       <Link to='/'>Retourner sur la page d’accueil</Link>
       
    
-    </div>  <Footer/></div>
+    </div>  </main> <Footer/>
+   
+    </div>
   );
 };
 
