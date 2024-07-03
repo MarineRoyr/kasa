@@ -7,7 +7,15 @@ $fontText: 'Montserrat';
     display: flex;
     justify-content: space-between;
 
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
     nav {
+
+
+
         ul {
             font-family: $fontText;
             display: flex;
@@ -52,12 +60,24 @@ $fontText: 'Montserrat';
 
     .NavBar {
 
+        h1 {
+            width: 110%;
+            max-width: 190px;
+
+            img {
+                width: 140%;
+            }
+        }
+
+
+
         nav {
+
 
             ul {
                 text-transform: uppercase;
-                font-size: 12px;
-                gap: 26px;
+                font-size: 11.5px;
+                gap: 20px;
                 font-weight: 500;
                 padding: 0;
 

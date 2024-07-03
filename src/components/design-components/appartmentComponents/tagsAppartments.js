@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../assets/styles/App.scss';
+import '../../../assets/styles/App.scss';
 import { useParams } from 'react-router-dom';
-import TagsData from '../../datas/appartments.json'
+import TagsData from '../../../datas/appartments.json'
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerImage from './bannerHomePage.png'
+import BannerImage from './images/bannerHomePage.png'
 import '../../assets/styles/banner.scss'
 
 

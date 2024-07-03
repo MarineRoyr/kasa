@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../assets/styles/App.scss';
+import '../../../assets/styles/App.scss';
 import { useParams } from 'react-router-dom';
-import Description from '../../datas/appartments.json'
+import Description from '../../../datas/appartments.json'
 
 
 

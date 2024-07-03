@@ -8,7 +8,7 @@ import Logo from './design-components/logo'
 
 const NavBar = () => {
     return (<div className='NavBar'>
-<Logo/>
+<h1><Logo/></h1>
 <nav>
  <ul>
    <li><Link to="/">Accueil</Link></li>

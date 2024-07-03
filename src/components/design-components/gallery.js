@@ -1,8 +1,8 @@
 import React from 'react';
-import '../assets/styles/gallery.scss'
+import '../../assets/styles/gallery.scss'
 import { Link } from 'react-router-dom';
-import galleryData from '../datas/appartments.json'; 
-import Card from './design-components/card'
+import galleryData from '../../datas/appartments.json'; 
+import Card from './card'
 
 const Gallery = () => {
     return (

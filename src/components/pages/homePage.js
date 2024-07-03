@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerHomePage from '../design-components/bannerHomePage'
-import Gallery from '../gallery'
+import Gallery from '../design-components/gallery'
 import '../../assets/styles/App.scss';
 
 

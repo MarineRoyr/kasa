@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/App.scss';
+import '../../assets/styles/gallery.scss';
 
 
 
@@ -10,7 +10,7 @@ const Card = ({imagePath, caption}) => {
          <div className="galleryPhoto">
                 <img src={imagePath} alt={caption} />
             </div>
-            <p className="caption">{caption}</p>
+            <h2 className="caption">{caption}</h2>
         </div>
     );
 };

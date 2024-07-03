@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/Collapse.scss'
+import '../../../assets/styles/Collapse.scss'
 
 
 const ChevronUp = () => {

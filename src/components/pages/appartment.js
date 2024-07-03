@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../assets/styles/appartment.scss';
 import GalleryData from '../../datas/appartments.json';
-import SlideShow from '../design-components/slideShow';
-import Tag from '../design-components/tagsAppartments';
-import Location from '../design-components/appartmentLocation';
-import Description from '../design-components/appartmentDescription';
-import EquipmentsAppart from '../design-components/appartmentEquipments';
-import Host from '../design-components/host';
-import RatingAppart from '../design-components/rating';
+import SlideShow from '../../components/design-components/appartmentComponents/slideShow';
+import Tag from '../../components/design-components/appartmentComponents/tagsAppartments';
+import Location from '../../components/design-components/appartmentComponents/appartmentLocation';
+import Description from '../../components/design-components/appartmentComponents/appartmentDescription';
+import EquipmentsAppart from '../../components/design-components/appartmentComponents/appartmentEquipments';
+import Host from '../../components/design-components/appartmentComponents/host';
+import RatingAppart from '../../components/design-components/appartmentComponents/rating';
 import Collapse from '../design-components/sectionDesign';
 
 
@@ -40,7 +40,7 @@ const Appartment = () => {
             </div>
             <div className='appartmentInfos'>
                 <div className='appartmentInfosLeft'>
-                    <h1>{appartment.title}</h1>
+                    <h2>{appartment.title}</h2>
                     <div className='location'><Location id={id} /></div> 
                     <div ><Tag id={id} /></div>
                 </div>

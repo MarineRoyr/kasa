@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import '../../assets/styles/appartment.scss'
+import '../../../assets/styles/App.scss';
 
 function Rating ({rating}){
 

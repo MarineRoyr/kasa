@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../assets/styles/App.scss';
+import '../../../assets/styles/App.scss';
 import { useParams } from 'react-router-dom';
-import Equipments from '../../datas/appartments.json'
-import '../../assets/styles/appartment.scss'
+import Equipments from '../../../datas/appartments.json'
+import '../../../assets/styles/appartment.scss'
 
 
 

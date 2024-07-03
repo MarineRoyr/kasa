@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../../assets/styles/App.scss';
 import '../../assets/styles/Collapse.scss'
-import ChevronUp from '../design-components/chevronUp'
+import ChevronUp from '../design-components/icons/chevronUp.js'
 
 
 const SectionDesign = ({ children, Title }) => {

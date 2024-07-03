@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../assets/styles/App.scss';
+import '../../../assets/styles/App.scss';
 import { useParams } from 'react-router-dom';
-import Location from '../../datas/appartments.json'
+import Location from '../../../datas/appartments.json'
 
 
 
@@ -18,9 +18,9 @@ const LocationAppart = () => {
     return (
 
         <div>
-        <h2 className='location'>
+        <h3 className='location'>
         { LocationData.location }
-        </h2>
+        </h3>
         </div>
     )
 }
