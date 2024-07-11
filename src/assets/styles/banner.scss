@@ -15,7 +15,7 @@ $fontText: 'Montserrat';
     box-shadow: 0px 4px 4px 0px #00000040;
     height: 223px;
 
-    .bannerImage {
+    .bannerImage img {
         width: 100%;
         opacity: 60%;
         object-fit: cover;
@@ -40,7 +40,7 @@ $fontText: 'Montserrat';
         margin-top: 20px;
         height: 111px;
 
-        .bannerImage {
+        .bannerImage img {
             height: 111.5px;
         }
 

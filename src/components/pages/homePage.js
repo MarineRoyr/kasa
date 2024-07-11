@@ -1,15 +1,16 @@
 import React from 'react';
-import BannerHomePage from '../design-components/bannerHomePage'
+import Banner from '../design-components/banner'
+import BannerImage from '../design-components/images/bannerHomePage.png'
 import Gallery from '../design-components/gallery'
 import '../../assets/styles/App.scss';
 
 
 const HomePage = () => {
     return (
-      <main>
-        <BannerHomePage/>
+      <div>
+        <Banner image={BannerImage} txt={"Chez vous, partout et ailleurs"} > </Banner>
         <Gallery/>
-      </main>
+      </div>
     );
   };
   

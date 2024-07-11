@@ -2,12 +2,13 @@ import React from 'react';
 import '../../assets/styles/App.scss';
 import AproposData from '../../datas/aPropos.json';
 import Collapse from '../design-components/sectionDesign'
-import BannerApropos from '../design-components/bannerApropos';
+import Banner from '../design-components/banner';
+import BannerApropos from '../design-components/images/bannerApropos.png'
 
 const APropos = () => {
     return (
-        <main>
-          <BannerApropos/>
+        <div>
+          <Banner image={BannerApropos}/>
             {AproposData.map((itemApropos) => (
                 <div key={itemApropos.id} className="AproposItem">
                     <div className="SectionTitle">
@@ -17,7 +18,7 @@ const APropos = () => {
                     </div>
                 </div>
             ))}
-        </main>
+        </div>
     );
 };
 
