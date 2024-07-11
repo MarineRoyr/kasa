@@ -8,7 +8,7 @@ import '../../assets/styles/App.scss';
 const HomePage = () => {
     return (
       <div>
-        <Banner image={BannerImage} txt={"Chez vous, partout et ailleurs"} > </Banner>
+        <Banner image={BannerImage} alt="Falaises au bord de l'eau" txt={"Chez vous, partout et ailleurs"} > </Banner>
         <Gallery/>
       </div>
     );

@@ -8,7 +8,7 @@ import BannerApropos from '../design-components/images/bannerApropos.png'
 const APropos = () => {
     return (
         <div>
-          <Banner image={BannerApropos}/>
+          <Banner image={BannerApropos} alt="Forêt de sapin et montagne"/>
             {AproposData.map((itemApropos) => (
                 <div key={itemApropos.id} className="AproposItem">
                     <div className="SectionTitle">

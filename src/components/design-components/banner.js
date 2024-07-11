@@ -2,11 +2,11 @@ import React from 'react';
 import '../../assets/styles/banner.scss'
 
 
-const Banner = ({image, txt}) => {
+const Banner = ({image, txt, alt}) => {
     return (
       <div className="bannerContainer"> 
       <div className="bannerImage"> 
-        <img src={image} alt="bannière, paysage nature"/> </div>
+        <img src={image} alt={alt}/> </div>
       <div className="bannerText">
           <p>{txt}</p>
       </div>
